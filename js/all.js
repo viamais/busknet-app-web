@@ -235,6 +235,74 @@ filterItems.forEach(function (item) {
     }
   });
 });
+/* Ativação de filtros de busca e preços na versão responsiva */
+
+var btnFilterSearch = document.querySelector('#open-filters-mobile');
+
+if (btnFilterSearch) {
+  btnFilterSearch.addEventListener('click', function () {
+    var aside = document.querySelector('.s-search-results__aside');
+    aside.classList.toggle('mobile');
+    aside.classList.toggle('active');
+    var closeFilterBtn = document.querySelector('.s-search-results__close-btn');
+    var applyFilterBtn = document.querySelector('#apply-filters');
+    applyFilterBtn.addEventListener('click', function () {
+      aside.classList.remove('mobile');
+      aside.classList.remove('active');
+    });
+    closeFilterBtn.addEventListener('click', function () {
+      aside.classList.remove('mobile');
+      aside.classList.remove('active');
+    });
+  });
+}
+
+var btnFilterPriceMobile = document.querySelector('#open-prices-mobile');
+
+if (btnFilterPriceMobile) {
+  btnFilterPriceMobile.addEventListener('click', function () {
+    var asidePricesMobile = document.querySelector('.results-filter-price__others-mobile');
+    asidePricesMobile.classList.toggle('mobile');
+    asidePricesMobile.classList.toggle('active');
+    var closeFilterBtn = document.querySelector('#close-filters-price');
+    var applyFilterBtn = document.querySelector('#apply-filters-price');
+    applyFilterBtn.addEventListener('click', function () {
+      asidePricesMobile.classList.remove('mobile');
+      asidePricesMobile.classList.remove('active');
+    });
+    closeFilterBtn.addEventListener('click', function () {
+      asidePricesMobile.classList.remove('mobile');
+      asidePricesMobile.classList.remove('active');
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  var scrollableContentPrices = document.getElementById('scrollable-content-prices');
+
+  if (scrollableContentPrices) {
+    scrollableContentPrices.addEventListener('scroll', function (e) {
+      if (scrollableContentPrices.scrollTop + scrollableContent.clientHeight >= scrollableContentPrices.scrollHeight) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    });
+  }
+});
+document.addEventListener('DOMContentLoaded', function () {
+  var scrollableContent = document.getElementById('scrollable-content');
+
+  if (scrollableContent) {
+    scrollableContent.addEventListener('scroll', function (e) {
+      if (scrollableContent.scrollTop + scrollableContent.clientHeight >= scrollableContent.scrollHeight) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    });
+  }
+});
 var btnSearch = document.querySelector('#btn-search-plans');
 var modalSearch = document.querySelector('#modal-searching-plan');
 
@@ -320,7 +388,9 @@ document.addEventListener('DOMContentLoaded', function () {
   } // Adicionar manipuladores de eventos para abrir e fechar o modal
 
 
-  openModalButton.addEventListener('click', openModal);
+  if (openModalButton) {
+    openModalButton.addEventListener('click', openModal);
+  }
 
   function updateSteps(step) {
     stepForms.forEach(function (form, index) {
@@ -364,4 +434,31 @@ document.addEventListener('DOMContentLoaded', function () {
       updateSteps(currentStep + 2);
     });
   });
-});
+}); //Parceiros
+
+var btnOpenModalPartners = document.querySelectorAll('.open-modal-partners');
+var btnCloseModalPartners = document.querySelectorAll('.close-modal-partners');
+
+if (btnOpenModalPartners.length > 0) {
+  btnOpenModalPartners.forEach(function (button) {
+    button.addEventListener('click', function (event) {
+      var targetModalId = document.querySelector('#modal-partner');
+
+      if (targetModalId) {
+        targetModalId.style.display = 'flex';
+      }
+    });
+  });
+}
+
+if (btnCloseModalPartners.length > 0) {
+  btnCloseModalPartners.forEach(function (button) {
+    button.addEventListener('click', function (event) {
+      var targetModalId = document.querySelector('#modal-partner');
+
+      if (targetModalId) {
+        targetModalId.style.display = 'none';
+      }
+    });
+  });
+}
