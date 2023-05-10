@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="./css/plugins.css" />
+		<link rel="stylesheet" href="./css/main.css" />
+		<title>Busknet - Indicador</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Gantari:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+
+	<body>
+		<header>
+			<!-- Este é o container do header da versão desktop -->
+			<div class="container">
+				<div class="navbar">
+					<a href="" class="navbar__logo">
+						<img src="/img/logo-busknet.svg" alt="Logo do Busknet" />
+					</a>
+					<nav>
+						<ul class="nav-desktop__nav">
+							<li class="menu-item" id="menu-item-1">
+								<a href="" class="nav-link-desktop">Planos de internet</a>
+								<ul class="dropdown-menu" id="dropdown-item-1">
+									<li class="dropdown-item">
+										<a href="" class="nav-link-dropdown">Planos Claro</a>
+									</li>
+									<li class="dropdown-item">
+										<a href="" class="nav-link-dropdown">Planos HughesNet</a>
+									</li>
+									<li class="dropdown-item">
+										<a href="" class="nav-link-dropdown">Planos Oi</a>
+									</li>
+									<li class="dropdown-item">
+										<a href="" class="nav-link-dropdown">Planos Tim</a>
+									</li>
+									<li class="dropdown-item">
+										<a href="" class="nav-link-dropdown">Planos Vivo</a>
+									</li>
+									<li class="dropdown-item">
+										<a href="" class="nav-link-dropdown">Planos Locais</a>
+									</li>
+								</ul>
+							</li>
+
+							<li class="menu-item" id="menu-item-2">
+								<a href="" class="nav-link-desktop">Indicador</a>
+							</li>
+							<li class="menu-item" id="menu-item-3">
+								<a href="" class="nav-link-desktop">Seja um parceiro</a>
+							</li>
+							<li class="menu-item" id="menu-item-4">
+								<a href="" class="nav-link-desktop">Sobre</a>
+							</li>
+						</ul>
+					</nav>
+
+					<button class="menu-btn">
+						<div class="menu-btn__burger"></div>
+					</button>
+				</div>
+				<nav class="nav-mobile">
+					<ul class="nav-mobile__nav">
+						<li class="menu-item" id="menu-item-1">
+							<a href="" class="nav-link-desktop"
+								>Planos de internet
+								<iconify-icon
+									class="iconify-chevron"
+									icon="bi:chevron-down"
+									style="color: #fff; font-size: 2.4rem"
+								></iconify-icon
+							></a>
+							<ul class="dropdown-menu" id="dropdown-item-1">
+								<li class="dropdown-item">
+									<a href="" class="nav-link-dropdown">Planos Claro </a>
+								</li>
+								<li class="dropdown-item">
+									<a href="" class="nav-link-dropdown">Planos HughesNet</a>
+								</li>
+								<li class="dropdown-item">
+									<a href="" class="nav-link-dropdown">Planos Oi</a>
+								</li>
+								<li class="dropdown-item">
+									<a href="" class="nav-link-dropdown">Planos Tim</a>
+								</li>
+								<li class="dropdown-item">
+									<a href="" class="nav-link-dropdown">Planos Vivo</a>
+								</li>
+								<li class="dropdown-item">
+									<a href="" class="nav-link-dropdown">Planos Locais</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="menu-item" id="menu-item-2">
+							<a href="" class="nav-link-desktop">Indicador</a>
+						</li>
+						<li class="menu-item" id="menu-item-3">
+							<a href="" class="nav-link-desktop">Seja um parceiro</a>
+						</li>
+						<li class="menu-item" id="menu-item-4">
+							<a href="" class="nav-link-desktop">Sobre</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<!--  início dos breadcrumbs da Página -->
+		<nav aria-label="Breadcrumb">
+			<div class="container">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item">
+						<a href="#">Página Inicial</a>
+					</li>
+					<li class="breadcrumb-icon">
+						<iconify-icon class="iconify-chevron" icon="bi:chevron-right">
+						</iconify-icon>
+					</li>
+					<li class="breadcrumb-item active">
+						<a href="#">Indicador</a>
+					</li>
+				</ol>
+			</div>
+		</nav>
+		<!--  fim dos breadcrumbs da Página -->
+		<main class="main-indicator">
+			<section class="s-indicator-content">
+				<div class="container">
+					<img src="img/indicator-img.png" alt="Garota sorrindo" />
+					<div class="s-indicator-content__text">
+						<h2>O plano certo, mesmo quando a dúvida bater</h2>
+						<p>
+							O BuskNet é uma ferramenta simples e rápida para você descobrir e
+							comparar as melhores ofertas de internet na sua região. Ao inserir
+							o seu município e estado, buscamos em nossa base de dados as
+							principais fornecedoras de internet da sua região e mostramos as
+							melhores ofertas de planos para você escolher.
+						</p>
+
+						<button class="btn primary" id="open-modal">
+							Indique o melhor plano para mim
+						</button>
+						<button class="btn white">Conversar com atendente</button>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<div class="container">
+				<div class="footer__left">
+					<div class="footer__logo__socials">
+						<div class="footer__logo">
+							<a href="#">
+								<img
+									src="img/logo-busknet-white.svg"
+									alt="Logo do BuskNet monocromático branco"
+								/>
+							</a>
+						</div>
+
+						<div class="footer__left__socials">
+							<p>Siga o Busknet</p>
+							<span
+								><a href="https://www.facebook.com/busknet" target="_blank">
+									<iconify-icon
+										class="iconify-facebook"
+										icon="ri:facebook-fill"
+										style="color: #fff; font-size: 2.4rem"
+									></iconify-icon>
+								</a>
+								<a href="https://www.instagram.com/busknet/" target="_blank">
+									<iconify-icon
+										class="iconify-instagram"
+										icon="ri:instagram-line"
+										style="color: #fff; font-size: 2.4rem"
+									></iconify-icon> </a
+							></span>
+						</div>
+					</div>
+					<nav class="footer__left__nav">
+						<h3>Operadoras</h3>
+						<ul>
+							<li><a href="#">Planos de internet Claro</a></li>
+							<li><a href="#">Planos de internet HughesNet</a></li>
+							<li><a href="#">Planos de internet Oi</a></li>
+							<li><a href="#">Planos de internet Americanet</a></li>
+							<li><a href="#">Planos de internet Tim Live</a></li>
+							<li><a href="#">Planos de internet Vivo Fibra</a></li>
+							<li><a href="#">Planos de internet outras operadoras</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="footer__right">
+					<nav class="footer__right__nav">
+						<h3>O Busknet</h3>
+						<ul>
+							<li><a href="#">Indicador</a></li>
+							<li><a href="#">Seja um parceiro</a></li>
+							<li><a href="#">Sobre nós</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</footer>
+
+		<div class="button-fixed">
+			<a href="#"><img src="img/icon-message.svg" alt="ícone de mensagem" /></a>
+		</div>
+
+		<div class="modal-stepper-container" id="modal-indicador">
+			<div class="step-content">
+				<form id="form-1" class="step-form">
+					<button type="button" id="close-indicador-modal">
+						<iconify-icon
+							class="iconify-close"
+							icon="ic:round-close"
+						></iconify-icon>
+					</button>
+					<h3>Quantas pessoas usam internet na sua casa?</h3>
+
+					<div class="step-form__grid">
+						<button type="button" class="step-button-btn">1 pessoa</button>
+						<button type="button" class="step-button-btn">2 pessoas</button>
+						<button type="button" class="step-button-btn">3 pessoas</button>
+						<button type="button" class="step-button-btn">
+							4 pessoas ou mais
+						</button>
+					</div>
+
+					<div class="step-indicators-buttons">
+						<div class="step-indicators">
+							<div class="step" data-step="1"></div>
+
+							<div class="step" data-step="2"></div>
+
+							<div class="step" data-step="3"></div>
+
+							<div class="step" data-step="4"></div>
+							<div class="step" data-step="5"></div>
+						</div>
+						<button type="button" class="next-button btn primary">
+							Próximo
+						</button>
+					</div>
+				</form>
+				<form id="form-2" class="step-form">
+					<button type="button" id="close-indicador-modal">
+						<iconify-icon
+							class="iconify-close"
+							icon="ic:round-close"
+						></iconify-icon>
+					</button>
+					<h3>Você(s) usam internet principalmente para?</h3>
+
+					<div class="step-form__grid">
+						<button type="button" class="step-button-btn">
+							Redes sociais e sites em geral
+						</button>
+						<button type="button" class="step-button-btn">
+							Streaming e vídeos
+						</button>
+						<button type="button" class="step-button-btn">Videochamdas</button>
+						<button type="button" class="step-button-btn">Jogos online</button>
+					</div>
+
+					<div class="step-indicators-buttons">
+						<button type="button" class="previous-button btn secondary">
+							Voltar
+						</button>
+						<div class="step-indicators">
+							<div class="step" data-step="1"></div>
+
+							<div class="step" data-step="2"></div>
+
+							<div class="step" data-step="3"></div>
+
+							<div class="step" data-step="4"></div>
+							<div class="step" data-step="5"></div>
+						</div>
+						<button type="button" class="next-button btn primary">
+							Próximo
+						</button>
+					</div>
+				</form>
+				<form id="form-3" class="step-form">
+					<button type="button" id="close-indicador-modal">
+						<iconify-icon
+							class="iconify-close"
+							icon="ic:round-close"
+						></iconify-icon>
+					</button>
+					<h3>Você usa a internet para trabalho (home office)?</h3>
+
+					<div class="step-form__grid">
+						<button type="button" class="step-button-btn">
+							Sim, todos os dias
+						</button>
+						<button type="button" class="step-button-btn">
+							Sim, mas não todos os dias
+						</button>
+						<button type="button" class="step-button-btn">Não</button>
+					</div>
+
+					<div class="step-indicators-buttons">
+						<button type="button" class="previous-button btn secondary">
+							Voltar
+						</button>
+						<div class="step-indicators">
+							<div class="step" data-step="1"></div>
+
+							<div class="step" data-step="2"></div>
+
+							<div class="step" data-step="3"></div>
+
+							<div class="step" data-step="4"></div>
+							<div class="step" data-step="5"></div>
+						</div>
+						<button type="button" class="next-button btn primary">
+							Próximo
+						</button>
+					</div>
+				</form>
+				<form id="form-4" class="step-form">
+					<button type="button" id="close-indicador-modal">
+						<iconify-icon
+							class="iconify-close"
+							icon="ic:round-close"
+						></iconify-icon>
+					</button>
+					<h3>Sua casa tem aparelhos IoT?</h3>
+					<p class="subtitle">
+						(lâmpadas e speakers inteligentes, smartTVs, etc)
+					</p>
+
+					<div class="step-form__grid">
+						<button type="button" class="step-button-btn">
+							De 1 a 5 aparelhos
+						</button>
+						<button type="button" class="step-button-btn">
+							De 6 a 10 aparelhos
+						</button>
+						<button type="button" class="step-button-btn">
+							Mais de 10 aparelhos
+						</button>
+						<button type="button" class="step-button-btn">Não possuo</button>
+					</div>
+
+					<div class="step-indicators-buttons">
+						<button type="button" class="previous-button btn secondary">
+							Voltar
+						</button>
+						<div class="step-indicators">
+							<div class="step" data-step="1"></div>
+
+							<div class="step" data-step="2"></div>
+
+							<div class="step" data-step="3"></div>
+
+							<div class="step" data-step="4"></div>
+							<div class="step" data-step="5"></div>
+						</div>
+						<button type="button" class="next-button btn primary">
+							Próximo
+						</button>
+					</div>
+				</form>
+
+				<form id="form-5" class="step-form last-step">
+					<button type="button" id="close-indicador-modal">
+						<iconify-icon
+							class="iconify-close"
+							icon="ic:round-close"
+						></iconify-icon>
+					</button>
+					<h3>Em qual endereço é a instalação?</h3>
+					<p class="subtitle">
+						Vamos consultar o melhor plano para sua região!
+					</p>
+
+					<div class="step-form__grid">
+						<div class="step-input__group">
+							<input
+								type="text"
+								id="endereco"
+								name="endereco"
+								placeholder="Seu endereço"
+							/>
+							<!-- input de telefone -->
+
+							<input
+								type="text"
+								id="telefone"
+								name="telefone"
+								placeholder="Seu telefone"
+							/>
+						</div>
+
+						<div class="step-form__group">
+							<p class="subtitle">
+								Qual era sua operadora de internet residencial anterior?
+							</p>
+							<div class="step-form__buttons">
+								<button type="button" class="step-button-btn">Claro</button>
+								<button type="button" class="step-button-btn">Oi fibra</button>
+								<button type="button" class="step-button-btn">Vivo</button>
+								<button type="button" class="step-button-btn">TIM</button>
+								<button type="button" class="step-button-btn">HughesNet</button>
+								<button type="button" class="step-button-btn">Outras</button>
+							</div>
+						</div>
+
+						<div class="step-form__group">
+							<p class="subtitle">
+								E por fim, nos diga o motivo da procura de um novo plano de
+								internet. Não se preocupe, essa pergunta não é obrigatória.
+							</p>
+							<div class="step-form__buttons">
+								<button type="button" class="step-button-btn">
+									Mudança de endereço
+								</button>
+								<button type="button" class="step-button-btn">
+									Valores altos
+								</button>
+								<button type="button" class="step-button-btn">
+									Serviço ruim
+								</button>
+								<button type="button" class="step-button-btn">Outros</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="step-indicators-buttons">
+						<button type="button" class="previous-button btn secondary">
+							Voltar
+						</button>
+						<div class="step-indicators">
+							<div class="step" data-step="1"></div>
+
+							<div class="step" data-step="2"></div>
+
+							<div class="step" data-step="3"></div>
+
+							<div class="step" data-step="4"></div>
+							<div class="step" data-step="5"></div>
+						</div>
+						<button type="submit" class="next-button btn primary">
+							Indicar
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/all.js"></script>
+	</body>
+</html>
