@@ -159,7 +159,87 @@ var slide_plans = new Swiper('.slide-plans', {
 /* PÁGINA DE RESULTADOS */
 
 /* FILTROS SUPERIORES DE VELOCIDADE E PREÇO DA PÁGINA DE RESULTADOS */
+//Modal de leads
+
+var btnsOpenModalLead = document.querySelectorAll('.open-modal-lead');
+var btnCloseModalLeads = document.querySelectorAll('.close-modal-leads');
+var stepOne = document.querySelector('.step-lead-1');
+var stepTwo = document.querySelector('.step-lead-2');
+var btnLeadContinue = document.querySelector('.lead-continue');
+var timeoutId, intervalId; // Definido globalmente para que possa ser acessado pelo evento 'click' do botão cancelar
+
+if (btnsOpenModalLead.length > 0) {
+  btnsOpenModalLead.forEach(function (button) {
+    button.addEventListener('click', function (event) {
+      event.preventDefault();
+      var targetModalId = document.querySelector('#modal-lead');
+
+      if (targetModalId) {
+        targetModalId.style.display = 'flex';
+      }
+
+      stepOne.style.display = 'flex'; // Certifique-se de que o stepOne seja exibido quando o modal for aberto
+
+      stepTwo.style.display = 'none'; // Certifique-se de que o stepTwo esteja oculto quando o modal for aberto
+    });
+  });
+}
+
+if (btnCloseModalLeads.length > 0) {
+  btnCloseModalLeads.forEach(function (button) {
+    button.addEventListener('click', function (event) {
+      event.preventDefault(); // Verifica se o timeoutId e o intervalId existem antes de tentar limpar
+
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+
+      if (intervalId) {
+        clearInterval(intervalId);
+      }
+
+      var targetModalId = document.querySelector('#modal-lead');
+
+      if (targetModalId) {
+        targetModalId.style.display = 'none';
+      }
+
+      var countSeconds = document.querySelector('.count-seconds');
+      countSeconds.textContent = ''; // Redefine o modal e o contador para o estado original
+
+      stepOne.style.display = 'flex';
+      stepTwo.style.display = 'none';
+    });
+  });
+}
+
+if (btnLeadContinue) {
+  btnLeadContinue.addEventListener('click', function (event) {
+    event.preventDefault();
+    stepOne.style.display = 'none';
+    stepTwo.style.display = 'block';
+    var countSeconds = document.querySelector('.count-seconds');
+    var redirectUrl = 'https://example.com';
+    var timeoutDuration = 5000; // 5000ms = 5s
+
+    var counter = timeoutDuration / 1000; // Comece a contagem regressiva
+
+    intervalId = setInterval(function () {
+      counter--;
+      countSeconds.textContent = counter;
+
+      if (counter <= 0) {
+        clearInterval(intervalId);
+      }
+    }, 1000); // Redireciona para a URL após o tempo de espera
+
+    timeoutId = setTimeout(function () {
+      window.location.href = redirectUrl;
+    }, timeoutDuration);
+  });
+} //Fim do modal de leads
 // Seleciona os elementos
+
 
 var mainBtn = document.querySelector('.results-filter-price__btn');
 var othersDiv = document.querySelector('.results-filter-price__others');
@@ -212,21 +292,16 @@ document.querySelectorAll('.btn-details-desktop, .btn-details-mobile').forEach(f
       event.target.innerHTML = showDetailsText;
     }
   });
-}); // Seleciona todos os elementos com a classe "aside-group__filter"
-
-var filterItems = document.querySelectorAll('.aside-group__filter'); // Adiciona um event listener a cada elemento
-
+});
+var filterItems = document.querySelectorAll('.aside-group__filter');
 filterItems.forEach(function (item) {
   item.addEventListener('click', function () {
-    // Verifica se o item clicado já tem a classe "active"
-    var isActive = item.classList.contains('active'); // Remove a classe "active" dos irmãos do elemento clicado
-
+    var isActive = item.classList.contains('active');
     item.parentNode.childNodes.forEach(function (sibling) {
       if (sibling.nodeType === Node.ELEMENT_NODE) {
         sibling.classList.remove('active');
       }
-    }); // Se o elemento clicado já possui a classe "active", a remove
-    // Caso contrário, adiciona a classe "active"
+    });
 
     if (isActive) {
       item.classList.remove('active');

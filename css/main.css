@@ -1966,10 +1966,8 @@ footer .container .footer__right .footer__right__nav ul li a:visited {
 }
 .modal-stepper-container .step-form .step-indicators-buttons .previous-button {
   height: 4rem;
-  order: 3;
 }
 .modal-stepper-container .step-form .step-indicators-buttons .next-button {
-  order: 1;
   height: 4rem;
 }
 @media (max-width: 414px) {
@@ -1977,6 +1975,12 @@ footer .container .footer__right .footer__right__nav ul li a:visited {
     flex-direction: column;
     justify-content: center;
     gap: 1.2rem;
+  }
+  .modal-stepper-container .step-form .step-indicators-buttons .previous-button {
+    order: 3;
+  }
+  .modal-stepper-container .step-form .step-indicators-buttons .next-button {
+    order: 1;
   }
 }
 .modal-stepper-container .step-form .step-indicators-buttons .step-indicators {
@@ -4006,4 +4010,198 @@ body {
   letter-spacing: -0.02em;
   /* color: $color; */
   color: #fff;
+}
+
+.modal-lead {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+}
+.modal-lead .modal-lead__content {
+  max-width: 100rem;
+  padding: 2.4rem;
+  background-color: #fff;
+  border-radius: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  align-items: center;
+  position: relative;
+  border: 4px solid #ff6514;
+}
+.modal-lead .modal-lead__content.step-lead-1 {
+  display: flex;
+}
+.modal-lead .modal-lead__content.step-lead-2 {
+  display: none;
+}
+@media (max-width: 414px) {
+  .modal-lead .modal-lead__content {
+    gap: 1.6rem;
+    padding: 1.6rem;
+  }
+}
+.modal-lead .modal-lead__content .iconify-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #000;
+  font-size: 3.2rem;
+}
+.modal-lead .modal-lead__content .modal-lead__content__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.6rem;
+  text-align: center;
+}
+.modal-lead .modal-lead__content .modal-lead__content__header img {
+  max-width: 16rem;
+}
+@media (max-width: 414px) {
+  .modal-lead .modal-lead__content .modal-lead__content__header {
+    gap: 1.2rem;
+  }
+}
+.modal-lead .modal-lead__content .modal-lead__content__header h2 {
+  font-family: "Gantari";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.8rem;
+  line-height: 2.8rem;
+  letter-spacing: -0.02em;
+  /* color: $color; */
+}
+@media (max-width: 414px) {
+  .modal-lead .modal-lead__content .modal-lead__content__header h2 {
+    font-family: "Gantari";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2rem;
+    letter-spacing: -0.02em;
+    /* color: $color; */
+  }
+}
+.modal-lead .modal-lead__content .modal-lead__content__header p {
+  font-family: "Gantari";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 130%;
+  letter-spacing: -0.02em;
+  /* color: $color; */
+}
+@media (max-width: 414px) {
+  .modal-lead .modal-lead__content .modal-lead__content__header p {
+    font-family: "Gantari";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    /* color: $color; */
+  }
+}
+.modal-lead .modal-lead__content .modal-lead__content__body {
+  width: 100%;
+  max-width: 50rem;
+}
+.modal-lead .modal-lead__content .modal-lead__content__body form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.6rem;
+  text-align: center;
+  max-width: 50rem;
+  width: 100%;
+}
+@media (max-width: 414px) {
+  .modal-lead .modal-lead__content .modal-lead__content__body form {
+    max-width: 100%;
+    gap: 0.8rem;
+  }
+}
+.modal-lead .modal-lead__content .modal-lead__content__body form .input-number {
+  width: 100%;
+  display: flex;
+  gap: 1.6rem;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.modal-lead .modal-lead__content .modal-lead__content__body form .input-number p {
+  font-family: "Gantari";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  /* identical to box height, or 167% */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.2px;
+  /* Neutras/Neutra 10 */
+  color: #0a0d0f;
+}
+.modal-lead .modal-lead__content .modal-lead__content__body form input[type=text] {
+  width: 100%;
+  padding: 1.6rem 1.6rem;
+  border: 1px solid #222121;
+  border-radius: 0.5rem;
+  outline: none;
+  font-family: "Gantari";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  letter-spacing: -0.02em;
+  /* color: $color; */
+}
+@media (min-width: 415px) and (max-width: 959px) {
+  .modal-lead .modal-lead__content .modal-lead__content__body form input[type=text] {
+    padding: 1.6rem;
+  }
+}
+@media (max-width: 414px) {
+  .modal-lead .modal-lead__content .modal-lead__content__body form input[type=text] {
+    padding: 1rem;
+    width: 100%;
+  }
+}
+.modal-lead .modal-lead__content .modal-lead__content__body form .input-group-number {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.6rem;
+}
+.modal-lead .modal-lead__content .modal-lead__content__body form .input-group-number label {
+  display: flex;
+  gap: 1.6rem;
+  font-family: "Gantari";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  letter-spacing: -0.02em;
+  /* color: $color; */
+}
+.modal-lead .modal-lead__content .modal-lead__content__body form .buttons-group {
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+  flex-direction: column;
+  gap: 1.6rem;
+  width: 100%;
+}
+.modal-lead .modal-lead__content .modal-lead__content__body form .buttons-group .primary {
+  width: 100%;
+  height: 4.8rem;
 }
