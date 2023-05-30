@@ -210,7 +210,10 @@
 							<button class="results-filter-price__btn" id="open-prices-mobile">
 								Menor preço
 							</button>
-							<div class="results-filter-price__others-mobile" id="scrollable-content-prices">
+							<div
+								class="results-filter-price__others-mobile"
+								id="scrollable-content-prices"
+							>
 								<h3>Ordenar por</h3>
 								<div class="overlay-button-mobile">
 									<button class="btn primary" id="apply-filters-price">
@@ -354,7 +357,9 @@
 												<p class="price__recurrence">mensal</p>
 											</div>
 											<div class="details-right__buttons">
-												<a class="btn primary" href="#">Ir para o site</a>
+												<a class="btn primary open-modal-lead" href="#"
+													>Ir para o site</a
+												>
 												<button class="btn text btn-details-desktop">
 													Ver detalhes
 												</button>
@@ -464,7 +469,9 @@
 												<p class="price__recurrence">mensal</p>
 											</div>
 											<div class="details-right__buttons">
-												<a class="btn primary" href="#">Ir para o site</a>
+												<a class="btn primary open-modal-lead" href="#"
+													>Ir para o site</a
+												>
 												<button class="btn text btn-details-desktop">
 													Ver detalhes
 												</button>
@@ -574,7 +581,9 @@
 												<p class="price__recurrence">mensal</p>
 											</div>
 											<div class="details-right__buttons">
-												<a class="btn primary" href="#">Ir para o site</a>
+												<a class="btn primary open-modal-lead" href="#"
+													>Ir para o site</a
+												>
 												<button class="btn text btn-details-desktop">
 													Ver detalhes
 												</button>
@@ -736,6 +745,86 @@
 			</div>
 		</div>
 		<!-- Fim do modal de pesquisa de planos -->
+
+		<!-- Início do modal de pesquisa de captura de lead -->
+
+		<!-- <div class="modal-lead" id="modal-lead">
+			<div class="modal-lead__content">
+				<div class="modal-lead__content__header">
+					
+					<h2>Complete seus dados para agilizar sua compra</h2>
+				</div>
+				<div class="modal-lead__content__body">
+					<input type="text" placeholder="Seu telefone com DDD" />
+					<input type="text" placeholder="Seu CEP" />
+					<input type="text" placeholder="Número" />
+				</div>
+			</div>
+		</div>
+ -->
+		<!-- Fim do modal de pesquisa de captura de lead -->
+
+		<div class="modal-lead" id="modal-lead">
+			<div class="modal-lead__content step-lead-1">
+				<iconify-icon
+					class="iconify-close close-modal-leads"
+					icon="ic:round-close"
+				></iconify-icon>
+				<div class="modal-lead__content__header">
+					<img src="img/logo-busknet.svg" alt="Logo do Busknet" />
+					<h2>Complete seus dados para agilizar sua compra</h2>
+				</div>
+				<div class="modal-lead__content__body">
+					<form>
+						<input type="text" placeholder="Seu telefone com DDD" />
+						<input type="text" placeholder="Seu CEP" />
+
+						<div class="input-number">
+							<input type="text" placeholder="Número" />
+							<div class="input-group-number">
+								<label>
+									<input
+										type="checkbox"
+										name="number-address"
+										value="no-number"
+									/>
+									<p>Este endereço não possui número</p>
+								</label>
+							</div>
+						</div>
+
+						<div class="buttons-group">
+							<button class="btn primary lead-continue" type="button">
+								Continuar
+							</button>
+							<button class="btn text close-modal-leads" type="button">
+								Cancelar
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="modal-lead__content step-lead-2">
+				<iconify-icon
+					class="iconify-close close-modal-leads"
+					icon="ic:round-close"
+				></iconify-icon>
+				<div class="modal-lead__content__header">
+					<img src="img/logo-busknet.svg" alt="Logo do Busknet" />
+					<h2>Você será redirecionado ao site externo em...</h2>
+					<h2 class="count-seconds"></h2>
+				</div>
+				<div class="modal-lead__content__body">
+					<form>
+						<div class="buttons-group">
+							<button class="btn text close-modal-leads" type="button">
+								Cancelar
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 
 		<!-- Scripts fundamentais para o funcionamento da página-->
 		<script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
